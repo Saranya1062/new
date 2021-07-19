@@ -1,0 +1,5 @@
+aaa sales 05-02-2001 Y Y
+bbb sales 03-04-2000 N Y
+ccc sales 05-02-1999 Y N
+ddd sales 03-04-2005 N Y
+eee sales 05-02-2004 Y Y

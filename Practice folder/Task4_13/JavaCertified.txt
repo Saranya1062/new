@@ -1,0 +1,3 @@
+aaa sales 05-02-2001 Y Y
+ccc sales 05-02-1999 Y N
+eee sales 05-02-2004 Y Y
