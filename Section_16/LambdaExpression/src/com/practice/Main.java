@@ -26,35 +26,35 @@ public class Main {
         employees.add(priya);
         employees.add(diya);
 
-////        Collections.sort(employees, new Comparator<Employee>() {
+////  1.      Collections.sort(employees, new Comparator<Employee>() {
 ////            @Override
 ////            public int compare(Employee employee1, Employee employee2) {
 ////                return employee1.getName().compareTo(employee2.getName());
 ////            }
 ////        });
 //
-//        Collections.sort(employees, (employee1, employee2) ->
+//   2.      Collections.sort(employees, (employee1, employee2) ->
 //                employee1.getName().compareTo(employee2.getName()));
 //
 //        for(Employee employee : employees) {
 //            System.out.println(employee.getName());
 //        }
 //
-////        String sillyString = doStringStuff(new UpperConcat() {
-////            @Override
-////            public String upperAndConcat(String s1, String s2) {
-////                return s1.toUpperCase() + s2.toUpperCase();
-////            }
-////        },
-////        employees.get(0).getName(), employees.get(1).getName());
-////        System.out.println(sillyString);
-//
-//        UpperConcat uc = (s1, s2) -> {
-//            String result = s1.toUpperCase() +  s2.toUpperCase();
-//            return result;
-//        };
-//        String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
+//        String sillyString = doStringStuff(new UpperConcat() {
+//            @Override
+//            public String upperAndConcat(String s1, String s2) {
+//                return s1.toUpperCase() + s2.toUpperCase();
+//            }
+//        },
+//        employees.get(0).getName(), employees.get(1).getName());
 //        System.out.println(sillyString);
+//
+        UpperConcat uc = (s1, s2) -> {
+            String result = s1.toUpperCase() +  s2.toUpperCase();
+            return result;
+        };
+        String sillyString = doStringStuff(uc, employees.get(0).getName(), employees.get(1).getName());
+        System.out.println(sillyString);
 
         AnotherClass anotherClass = new AnotherClass();
         String s = anotherClass.doSomething();
@@ -102,12 +102,12 @@ class AnotherClass {
         int i = 0;
 
         UpperConcat uc = (s1, s2) -> {
-            System.out.println("The lambda expression's class is " + getClass().getSimpleName());
+          System.out.println("The lambda expression's class is " + getClass().getSimpleName());
             String result = s1.toUpperCase() + s2.toUpperCase();
             return result;
         };
 
-        System.out.println("The AnotherClass class's name is " + getClass().getSimpleName());
+          System.out.println("The AnotherClass class's name is " + getClass().getSimpleName());
         return Main.doStringStuff(uc,"String1","String2");
     }
 }
